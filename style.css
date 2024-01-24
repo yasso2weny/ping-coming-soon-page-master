@@ -1,0 +1,231 @@
+/*  (-CSS reset- Credit: Josh Comeau ) */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/*  CSS Reset End */
+
+:root {
+  --primary-clr: hsl(223, 87%, 63%);
+  --hvr-clr: hsl(223, 100%, 74%);
+  --error-clr: hsl(354, 100%, 66%);
+  --primary-neutral: hsl(0, 0%, 59%);
+  --secondary-neutral: hsl(209, 33%, 12%);
+
+  --ff-base: "Libre Franklin", sans-serif;
+
+  --fw-light: 300;
+  --fw-regular: 600;
+  --fw-bold: 700;
+}
+
+body {
+  font-family: var(--ff-base);
+  font-size: 1.25rem;
+  margin-block: 3.125rem;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3.125rem;
+}
+
+#logo {
+  margin-bottom: 1.875rem;
+}
+
+h1 {
+  font-weight: var(--fw-light);
+  color: var(--primary-neutral);
+}
+
+span {
+  font-weight: var(--fw-bold);
+  color: var(--secondary-neutral);
+}
+
+h2 {
+  font-weight: var(--fw-light);
+  font-size: 1.125rem;
+  margin-bottom: 1.5625rem;
+}
+
+section {
+  display: flex;
+  gap: 0.625rem;
+}
+
+/* Input */
+
+#email {
+  border-radius: 2.5rem;
+  padding: 0.3125rem 5.625rem 0.3125rem 1.25rem;
+
+  outline: none;
+  border: 0.0625rem solid var(--primary-neutral);
+}
+
+#email::placeholder {
+  color: var(--primary-neutral);
+  font-size: 0.9375rem;
+}
+
+/* Error Message */
+
+#error-msg-wrapper {
+  margin-top: 0.5rem;
+  margin-left: -16.875rem;
+}
+
+#error-message {
+  color: var(--error-clr);
+  font-size: 0.75rem;
+}
+
+/* Input Button */
+
+#button {
+  border-radius: 2.5rem;
+  background-color: var(--primary-clr);
+  color: white;
+  border: none;
+  padding: 0.3125rem 2.5rem 0.3125rem 2.5rem;
+  font-size: 0.9375rem;
+  box-shadow: 0 0 0.3125rem hsl(223, 87%, 63%);
+  cursor: pointer;
+}
+
+#button:hover {
+  background-color: var(--hvr-clr);
+}
+
+/* Main */
+
+main {
+  display: grid;
+  place-items: center;
+  margin-bottom: 3.125rem;
+}
+
+main img {
+  width: 34.375rem;
+}
+
+/* Footer */
+
+footer {
+  display: grid;
+  place-items: center;
+  gap: 0.625rem;
+}
+
+#icons-container {
+  display: flex;
+  gap: 0.625rem;
+}
+
+#icons-container img {
+  filter: invert(61%) sepia(84%) saturate(4965%) hue-rotate(207deg)
+    brightness(99%) contrast(92%);
+  width: 0.9375rem;
+}
+
+.icon {
+  border-radius: 3.125rem;
+  border: 0.0625rem solid var(--primary-neutral);
+  padding: 0.3125rem;
+  cursor: pointer;
+}
+
+.icon:hover {
+  background-color: var(--primary-clr);
+  border-color: transparent;
+}
+
+#icons-container img:hover {
+  filter: invert(100%) sepia(54%) saturate(0%) hue-rotate(221deg)
+    brightness(109%) contrast(101%);
+}
+
+footer p {
+  font-size: 0.75rem;
+  color: var(--primary-neutral);
+}
+
+@media (max-width: 375px) {
+  h1 {
+    font-size: 1.875rem;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    margin-bottom: 35px;
+  }
+
+  section {
+    flex-direction: column;
+  }
+
+  #email {
+    padding: 0.3125rem 5.625rem 0.3125rem 1.5625rem;
+  }
+
+  #button {
+    padding: 0.625rem 2.5rem 0.625rem 2.5rem;
+  }
+
+  main img {
+    width: 350px;
+  }
+
+  #icons-container {
+    margin-bottom: 0.625rem;
+  }
+}
